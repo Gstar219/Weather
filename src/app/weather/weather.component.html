@@ -1,0 +1,27 @@
+<div class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12 bg-yellow" style="background-image:url('https://images.unsplash.com/photo-1506318137071-a8e063b4bec0?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1370&q=80');">
+    <div class="relative py-3 sm:max-w-xl sm:mx-auto ">
+        
+        <div *ngIf="WeatherData.isDay" class="text-white font-bold justify-center  pb-8">
+            <img src="./assets/sun.png" width="100px" >Day</div>   
+       
+            <div *ngIf="!WeatherData.isDay" class="font-bold text-white pb-8"> 
+           <img src="./assets/moon.png" width="100px">Night
+       </div>   
+       
+      <div Class="bg-blue-500 text-white flex flex-row gap-4">
+        
+        <div class="text-white font-bold flex flex-row "><img src="./assets/temperature.png" width="20px">Temperature: {{WeatherData?.temp_min}}° / {{WeatherData?.temp_max}}°</div>
+        <div class="text-white font-bold">Feels Like: {{WeatherData?.temp_feels_like}}°</div>
+        <div class="text-white font-bold flex flex-row"><img src="./assets/Nigeria.png" width="20px"> {{WeatherData?.name}}</div>
+        <div class="text-white font-bold flex flex-row"><img src="./assets/humidity.png" width="20px"> Humidity: {{WeatherData?.main.humidity}}%</div>
+      </div>
+    
+<div class="pt-2">
+    <div class="text-white font-bold flex flex-row pb-4">{{WeatherData?.temp_celcius}}° {{WeatherData?.name}} </div>
+    <div class="text-white font-bold flex flex-row pb-4"><img src="./assets/temperature.png" width="20px"> Temperature: {{WeatherData?.temp_min}}° / {{WeatherData?.temp_max}}°</div>
+    <div class="text-white font-bold flex flex-row pb-4">Feels Like: {{WeatherData?.temp_feels_like}}°</div>
+    <div class="text-white font-bold flex flex-row pb-4">Country: {{WeatherData?.name}}<img src="./assets/Nigeria.png" width="20px"></div>
+    <div class="text-white font-bold flex flex-row pb-4"><img src="./assets/humidity.png" width="20px"> Humidity: {{WeatherData?.main.humidity}}%</div>
+</div>
+</div>
+</div>
